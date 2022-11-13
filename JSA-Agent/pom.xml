@@ -40,15 +40,15 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <archive>
-                        <!--<manifestFile>-->
-                        <!--    src/main/resources/META-INF/MANIFEST.MF-->
-                        <!--</manifestFile>-->
-                        <manifestEntries>
-                            <Premain-Class>JsaAgentBootstrap</Premain-Class>
-                            <Agent-Class>JsaAgentBootstrap</Agent-Class>
-                            <Can-Redefine-Classes>true</Can-Redefine-Classes>
-                            <Can-Retransform-Classes>true</Can-Retransform-Classes>
-                        </manifestEntries>
+                        <manifestFile>
+                            JSA\JSA-Agent\jsa-agent\src\main\resources\META-INF\MANIFEST.MF
+                        </manifestFile>
+                        <!--<manifestEntries>-->
+                        <!--    <Premain-Class>JsaAgentBootstrap</Premain-Class>-->
+                        <!--    <Agent-Class>JsaAgentBootstrap</Agent-Class>-->
+                        <!--    <Can-Redefine-Classes>true</Can-Redefine-Classes>-->
+                        <!--    <Can-Retransform-Classes>true</Can-Retransform-Classes>-->
+                        <!--</manifestEntries>-->
                     </archive>
                 </configuration>
 
