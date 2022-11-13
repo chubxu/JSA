@@ -10,12 +10,25 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>jsa-agent</module>
+        <module>jsa-core</module>
     </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+
+        <netty.version>4.1.85.Final</netty.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
@@ -31,8 +44,8 @@
                         <!--    src/main/resources/META-INF/MANIFEST.MF-->
                         <!--</manifestFile>-->
                         <manifestEntries>
-                            <Premain-Class>org.chubxu.jsa.JsaAgentBootstrap</Premain-Class>
-                            <Agent-Class>org.chubxu.jsa.JsaAgentBootstrap</Agent-Class>
+                            <Premain-Class>JsaAgentBootstrap</Premain-Class>
+                            <Agent-Class>JsaAgentBootstrap</Agent-Class>
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>

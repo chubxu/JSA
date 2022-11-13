@@ -1,4 +1,4 @@
-package org.chubxu.jsa;
+package org.chubxu.jsa.agent;
 
 import java.lang.instrument.Instrumentation;
 import java.util.Map;
@@ -23,5 +23,9 @@ public class JsaAgentBootstrap {
 
     public static Map<String, Object> parseArgs(String args) {
         return null;
+    }
+
+    private void attach() {
+
     }
 }
